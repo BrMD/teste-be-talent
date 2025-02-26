@@ -1,0 +1,18 @@
+.header {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header img {
+  height: 34px;
+  width: 90px;
+  margin-left: 0.5rem;
+}
+
+@media (width > 600px) {
+  .header img {
+    margin-left: 1rem;
+  }
+}
