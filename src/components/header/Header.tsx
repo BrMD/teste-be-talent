@@ -3,7 +3,7 @@ import "./header.css";
 function Header() {
   return (
     <header className="header">
-      <img className="imgg" src="./img/logo.png" alt="logo" />
+      <img src="./img/logo.svg" alt="logo" />
     </header>
   );
 }

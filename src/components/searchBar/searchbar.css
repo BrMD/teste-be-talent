@@ -1,0 +1,23 @@
+.searchBar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.searchBar img {
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+}
+
+.searchBar input {
+  width: 100%;
+  border: 0;
+  margin-left: 0.5rem;
+}
+
+.searchBar input:focus {
+  outline: none;
+}
