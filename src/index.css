@@ -7,6 +7,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 600px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 600px;
+}
+
 :root {
   --blue-primary: #0500ff;
   --black: #1c1c1c;
@@ -18,6 +33,7 @@ body {
   --spacing-medium: 32px;
   --spacing-regular: 16px;
   --spacing-little: 4px;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 @media (min-width: 480px) {
@@ -38,5 +54,18 @@ body {
     --spacing-medium: 80px;
     --spacing-regular: 32px;
     --spacing-little: 8px;
+  }
+}
+
+.show-on-mobile {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .hide-on-mobile {
+    display: none;
+  }
+  .show-on-mobile {
+    display: table-cell;
   }
 }

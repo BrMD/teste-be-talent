@@ -1,10 +1,7 @@
+import { propSearchSetState } from "../types";
 import "./searchbar.css";
 
-type propSearchSetState = {
-  setState: React.Dispatch<React.SetStateAction<string>>;
-};
-
-function SearchBar({ setState }: propSearchSetState) {
+const SearchBar = ({ setState }: propSearchSetState) => {
   return (
     <div className="searchBar">
       <input
@@ -14,6 +11,6 @@ function SearchBar({ setState }: propSearchSetState) {
       <img src="./svg/lupa.svg" alt="lupa" />
     </div>
   );
-}
+};
 
 export default SearchBar;

@@ -1,0 +1,52 @@
+.row {
+  background-color: var(--white);
+  height: 50px;
+}
+
+.addedBorder {
+  border-bottom: 1px solid var(--gray-00);
+}
+.row img {
+  width: 20px;
+  height: 20px;
+}
+
+.row td {
+  text-align: center;
+}
+
+.row:last-child {
+  border-radius: 10px;
+}
+
+.expandButton {
+  border: none;
+  outline: none;
+  background: var(--white);
+}
+
+.expandedAnimation {
+  animation: rotate180 0.5s forwards;
+}
+
+@keyframes rotate180 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.expandedDiv {
+  background-color: var(--white);
+  width: 300%;
+  display: flex;
+  flex-direction: column;
+}
+
+.expandedDiv div {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 var(--spacing-regular);
+}

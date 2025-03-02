@@ -4,7 +4,6 @@
   min-height: 100vh;
   min-width: 100vw;
   background-color: var(--gray-00);
-  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 .wrapper {
@@ -30,6 +29,14 @@
 }
 
 /* Styles for search bar */
+
+.tableContainer {
+  margin: var(--spacing-regular) var(--spacing-regular) 0 var(--spacing-regular);
+}
+
+/* Styles for table */
+
+/* Styles for table */
 
 .wrapper h1 {
   font-size: 20px;
