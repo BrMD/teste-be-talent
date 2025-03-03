@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+# Teste Front-end Betalent
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Instruções
+inicialmente faça um `git clone` do projeto
+Após isso rode o comando
 
-## Available Scripts
+### `npm install`
+após isso é só rodar o comando  
+### `npm run start`
+para iniciar o projeto e para acessar o projeto abra [http://localhost:3000](http://localhost:3000)
 
-In the project directory, you can run:
+## Explicações de código
+Este tópico é para explicar um pouco algumas partes do código 
+a começar da search bar essa search bar que criei poderia ser usada em outras partes do sistema caso fosse necessário pois ela só necessita 
+de uma prop que caso é uma função se setstate vindo do parent element 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![image](https://github.com/user-attachments/assets/18c26f06-3185-49a1-a563-807b268a166a)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+no caso ela iria vir com esse style poderia colocar algumas estilizações a mais vindas também do parent element mas acredito que não era a proposta do desafio 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Adicionei também o hook useMemo para ajudar na renderização da tabela, no caso como essa tabela tem poucos registros não tem muita diferença de desempenho mas em caso de uma tabela com mais registros 
+iria ajudar bastante pois ele evita re-renderizações desnecessarias
 
-### `npm run build`
+A tabela também poderia ser reutilizada com alguns ajustes pois os headers da tabela são mapeados a partir de um array e ela também ja esconde alguns headers no mobile e também possível alterar quais ela vai esconder
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ja o table body não é reutilizavel ja que ele é muito variavel e tem muito hardcode pois depende da lista que vai ser mostrada.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Adicionei um listener que no Tablebody para caso o usuario fique dando resize na tela ele muda o colspan dos possiveis erros na tabela(no caso os erros são quando o backend não consegue enviar o json ou não tem nenhum registro de acord com o search do usuario)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Tem outro listener dentro de cada row que no caso ele troca o state pra false da div que aparece quando o usuario clica para ver mais detalhes, essa div só existe no mobile e é controlada por um state dentro do componente mas tinha um bug que quando o usuario clicava para ver mais detalhes e depois dava resize(me refiro a resize quando o usuario fica alterando o tamanho da pagina com o console) pra web o state continuava ativo e quebrava a tabela.
 
-### `npm run eject`
+## Considerações finais
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Desde ja agradeço a oportunidade e foi bem legal fazer o desafio espero que gostem demorei um pouco pra fazer pois tive alguns contratempos durante esse periodo.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ff
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
