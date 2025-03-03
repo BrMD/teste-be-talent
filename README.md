@@ -7,7 +7,10 @@ Após isso rode o comando
 ### `npm install`
 após isso é só rodar o comando  
 ### `npm run start`
-para iniciar o projeto e para acessar o projeto abra [http://localhost:3000](http://localhost:3000)
+esse comando ja roda o json-server e o react-start
+
+para visualizar o projeto e para acessar o projeto abra [http://localhost:3000](http://localhost:3000)
+vale ressaltar que estou usando o a versão 22 do node(não sei se ira impactar em algo mas é bom deixar aqui)
 
 ## Explicações de código
 Este tópico é para explicar um pouco algumas partes do código 
