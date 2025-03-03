@@ -7,8 +7,9 @@
   border-bottom: 1px solid var(--gray-00);
 }
 .row img {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
 }
 
 .row td {
@@ -27,6 +28,17 @@
 
 .expandedAnimation {
   animation: rotate180 0.5s forwards;
+}
+
+.errorFetchData {
+  background-color: var(--white);
+  width: 500%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 @keyframes rotate180 {
@@ -49,4 +61,10 @@
   display: flex;
   justify-content: space-between;
   margin: 0 var(--spacing-regular);
+}
+
+@media (max-width: 480px) {
+  .errorFetchData {
+    width: 300%;
+  }
 }

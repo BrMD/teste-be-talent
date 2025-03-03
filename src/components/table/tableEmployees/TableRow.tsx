@@ -4,6 +4,12 @@ import "./tablerow.css";
 
 const TableRow = ({ employee }: { employee: Employee }) => {
   const [active, setActive] = useState(false);
+  const handleResize = (event: MediaQueryListEvent) => {
+    setActive(false);
+  };
+  window
+    .matchMedia("(max-width: 480px)")
+    .addEventListener("change", handleResize);
   return (
     <>
       <tr key={employee.id} className={active ? "row" : "row addedBorder"}>

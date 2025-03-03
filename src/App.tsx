@@ -7,9 +7,11 @@ const App = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://localhost:3001/employees");
-      const data = await response.json();
-      setEmployees(await data);
+      try {
+        const response = await fetch("http://localhost:3001/employees");
+        const data = await response.json();
+        setEmployees(await data);
+      } catch (e) {}
     };
 
     fetchData();

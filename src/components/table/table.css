@@ -27,4 +27,15 @@
   .table th:last-child {
     border-top-right-radius: 8px;
   }
+  .table tr:last-child > td:last-child {
+    border-bottom-right-radius: 8px;
+  }
+}
+
+.table tr:last-child > td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.table tr:last-child > td:nth-last-child(2) {
+  border-bottom-right-radius: 8px;
 }

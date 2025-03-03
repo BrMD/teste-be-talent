@@ -17,8 +17,8 @@ const transformDate = (date: Date) => {
 
   const month =
     newDate.getUTCMonth() < 10
-      ? `0${newDate.getUTCMonth()}`
-      : newDate.getUTCMonth();
+      ? `0${newDate.getUTCMonth() + 1}`
+      : newDate.getUTCMonth() + 1;
 
   const year = newDate.getUTCFullYear();
 
@@ -33,7 +33,6 @@ const transforPhone = (phone: string) => {
 };
 
 export const fixDatesFormatAndPhoneNumber = (employeeDto: EmployeeDto) => {
-  console.log(employeeDto.admission_date);
   const employee: Employee = {
     id: employeeDto.id,
     name: employeeDto.name,
