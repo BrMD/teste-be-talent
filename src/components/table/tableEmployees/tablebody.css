@@ -1,0 +1,12 @@
+.errorFetchData {
+  background-color: var(--white);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+@media (max-width: 480px) {
+}

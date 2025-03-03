@@ -4,7 +4,7 @@ import "./tablerow.css";
 
 const TableRow = ({ employee }: { employee: Employee }) => {
   const [active, setActive] = useState(false);
-  const handleResize = (event: MediaQueryListEvent) => {
+  const handleResize = () => {
     setActive(false);
   };
   window
@@ -34,20 +34,22 @@ const TableRow = ({ employee }: { employee: Employee }) => {
         </td>
       </tr>
       {active && (
-        <div className="expandedDiv addedBorder">
-          <div>
-            <h2>Cargo</h2>
-            <h3>{employee.job}</h3>
-          </div>
-          <div>
-            <h2>Data de Amissão</h2>
-            <h3>{employee.admission_date}</h3>
-          </div>
-          <div>
-            <h2>Telefone</h2>
-            <h3>{employee.phone}</h3>
-          </div>
-        </div>
+        <tr className="expandedDiv addedBorder">
+          <td>
+            <div>
+              <h2>Cargo</h2>
+              <h3>{employee.job}</h3>
+            </div>
+            <div>
+              <h2>Data de Amissão</h2>
+              <h3>{employee.admission_date}</h3>
+            </div>
+            <div>
+              <h2>Telefone</h2>
+              <h3>{employee.phone}</h3>
+            </div>
+          </td>
+        </tr>
       )}
     </>
   );
