@@ -1,11 +1,20 @@
 import { TableType } from "../types";
 import "./table.css";
 
-const TableHeader = ({ headers }: { headers: Array<string> }) => {
+const TableHeader = ({
+  headers,
+  hideMobileColumnIndex,
+}: {
+  headers: Array<string>;
+  hideMobileColumnIndex: number;
+}) => {
   return (
     <tr>
       {headers.map((item, index) => (
-        <th className={index > 1 ? "hide-on-mobile" : ""} key={item}>
+        <th
+          className={index > hideMobileColumnIndex ? "hide-on-mobile" : ""}
+          key={item}
+        >
           <h3>{item}</h3>
         </th>
       ))}
@@ -20,7 +29,7 @@ const Table = ({ tableHeaders, children }: TableType) => {
   return (
     <table className="table">
       <thead>
-        <TableHeader headers={tableHeaders} />
+        <TableHeader headers={tableHeaders} hideMobileColumnIndex={1} />
       </thead>
       <tbody>{children}</tbody>
     </table>
