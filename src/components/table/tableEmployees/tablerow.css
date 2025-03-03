@@ -30,17 +30,6 @@
   animation: rotate180 0.5s forwards;
 }
 
-.errorFetchData {
-  background-color: var(--white);
-  width: 500%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-
 @keyframes rotate180 {
   from {
     transform: rotate(0deg);
@@ -51,20 +40,7 @@
 }
 
 .expandedDiv {
-  background-color: var(--white);
-  width: 300%;
-  display: flex;
-  flex-direction: column;
-}
-
-.expandedDiv div {
   display: flex;
   justify-content: space-between;
   margin: 0 var(--spacing-regular);
-}
-
-@media (max-width: 480px) {
-  .errorFetchData {
-    width: 300%;
-  }
 }

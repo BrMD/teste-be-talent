@@ -13,18 +13,19 @@ const TableBody = ({ employees, searched }: TableBodyType) => {
   }, [employees, searched]);
 
   const handleResize = () => {
-    setColspan(3);
+    if (colspan === 5) setColspan(3);
+    if (colspan === 3) setColspan(5);
   };
   window
-    .matchMedia("(max-width: 480px)")
+    .matchMedia("(min-width: 480px)")
     .addEventListener("change", handleResize);
 
   const renderContent = () => {
     if (employees === undefined) {
       return (
-        <tr>
-          <td className="errorFetchData">
-            <h3>Nenhum resultado encontrado</h3>
+        <tr className="row error">
+          <td colSpan={colspan} className="errorFetchData">
+            <h3>Erro ao requisitar dados</h3>
           </td>
         </tr>
       );
@@ -32,8 +33,8 @@ const TableBody = ({ employees, searched }: TableBodyType) => {
 
     if (!filteredEmployees || filteredEmployees.length === 0) {
       return (
-        <tr>
-          <td className="errorFetchData">
+        <tr className="row error">
+          <td colSpan={colspan}>
             <h3>Nenhum resultado encontrado</h3>
           </td>
         </tr>

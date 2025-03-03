@@ -34,17 +34,17 @@ const TableRow = ({ employee }: { employee: Employee }) => {
         </td>
       </tr>
       {active && (
-        <tr className="expandedDiv addedBorder">
-          <td>
-            <div>
+        <tr className="row addedBorder">
+          <td colSpan={3}>
+            <div className="expandedDiv">
               <h2>Cargo</h2>
               <h3>{employee.job}</h3>
             </div>
-            <div>
+            <div className="expandedDiv">
               <h2>Data de Amissão</h2>
               <h3>{employee.admission_date}</h3>
             </div>
-            <div>
+            <div className="expandedDiv">
               <h2>Telefone</h2>
               <h3>{employee.phone}</h3>
             </div>

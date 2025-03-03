@@ -19,8 +19,10 @@ const TableHeader = ({ headers }: { headers: Array<string> }) => {
 const Table = ({ tableHeaders, children }: TableType) => {
   return (
     <table className="table">
-      <TableHeader headers={tableHeaders} />
-      {children}
+      <thead>
+        <TableHeader headers={tableHeaders} />
+      </thead>
+      <tbody>{children}</tbody>
     </table>
   );
 };
