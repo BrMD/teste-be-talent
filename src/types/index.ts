@@ -31,6 +31,7 @@ export type TableBodyType = {
 };
 
 export type TableType = {
+  hideMobileColumnIndex: number;
   tableHeaders: Array<string>;
   children: React.ReactNode;
 };

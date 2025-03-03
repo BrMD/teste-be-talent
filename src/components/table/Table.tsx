@@ -25,11 +25,18 @@ const TableHeader = ({
   );
 };
 
-const Table = ({ tableHeaders, children }: TableType) => {
+const Table = ({
+  tableHeaders,
+  hideMobileColumnIndex,
+  children,
+}: TableType) => {
   return (
     <table className="table">
       <thead>
-        <TableHeader headers={tableHeaders} hideMobileColumnIndex={1} />
+        <TableHeader
+          headers={tableHeaders}
+          hideMobileColumnIndex={hideMobileColumnIndex}
+        />
       </thead>
       <tbody>{children}</tbody>
     </table>

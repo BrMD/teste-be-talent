@@ -17,7 +17,7 @@ const Main = ({ employees }: EmployeesArrayType) => {
         <SearchBar setState={setSearched} />
       </section>
       <section className="tableContainer">
-        <Table tableHeaders={headersArray}>
+        <Table tableHeaders={headersArray} hideMobileColumnIndex={1}>
           <TableBody employees={employees} searched={searched} />
         </Table>
       </section>
