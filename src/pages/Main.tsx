@@ -3,7 +3,7 @@ import Header from "../components/header/Header";
 import SearchBar from "../components/searchBar/SearchBar";
 import Table from "../components/table/Table";
 import TableBody from "../components/table/tableEmployees/TableBody";
-import { EmployeesArrayType } from "../components/types";
+import { EmployeesArrayType } from "../types";
 import { headersArray } from "../constants/contants";
 import "./main.css";
 

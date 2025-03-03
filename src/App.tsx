@@ -1,7 +1,7 @@
 import Main from "./pages/Main";
 import { useEffect, useState } from "react";
-import { EmployeeDto } from "./components/types";
-import { fixDatesFormatAndPhoneNumber } from "./components/utils";
+import { EmployeeDto } from "./types";
+import { fixDatesFormatAndPhoneNumber } from "./utils";
 const App = () => {
   const [employees, setEmployees] = useState<Array<EmployeeDto>>();
 

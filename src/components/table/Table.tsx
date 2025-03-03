@@ -1,4 +1,4 @@
-import { TableType } from "../types";
+import { TableType } from "../../types";
 import "./table.css";
 
 const TableHeader = ({

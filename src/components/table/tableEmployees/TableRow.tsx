@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Employee } from "../../types";
+import { Employee } from "../../../types";
 import "./tablerow.css";
 
 const TableRow = ({ employee }: { employee: Employee }) => {

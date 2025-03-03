@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
-import { Employee, TableBodyType } from "../../types";
-import { filterArrayEmployees } from "../../utils";
+import { Employee, TableBodyType } from "../../../types";
+import { filterArrayEmployees } from "../../../utils";
 import TableRow from "./TableRow";
 import "./tablebody.css";
 

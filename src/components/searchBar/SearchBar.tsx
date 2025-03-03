@@ -1,4 +1,4 @@
-import { propSearchSetState } from "../types";
+import { propSearchSetState } from "../../types";
 import "./searchbar.css";
 
 const SearchBar = ({ setState }: propSearchSetState) => {

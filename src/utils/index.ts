@@ -16,7 +16,7 @@ const transformDate = (date: Date) => {
       : newDate.getUTCDate();
 
   const month =
-    newDate.getUTCMonth() < 10
+    newDate.getUTCMonth() + 1 < 10
       ? `0${newDate.getUTCMonth() + 1}`
       : newDate.getUTCMonth() + 1;
 
