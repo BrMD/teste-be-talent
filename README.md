@@ -35,5 +35,4 @@ Tem outro listener dentro de cada row que no caso ele troca o state pra false da
 
 Desde ja agradeço a oportunidade e foi bem legal fazer o desafio espero que gostem demorei um pouco pra fazer pois tive alguns contratempos durante esse periodo.
 
-ff
 
